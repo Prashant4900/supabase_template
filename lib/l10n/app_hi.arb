@@ -1,0 +1,238 @@
+{
+    "@@locale": "hi",
+    "helloWorld": "नमस्ते, दुनिया! हिंदी",
+    "@helloWorld": {
+        "type": "text",
+        "description": "A hello world message"
+    },
+    "home": "होम",
+    "@home": {
+        "type": "text",
+        "description": "Home page"
+    },
+    "homeScreen": "होम स्क्रीन",
+    "@homeScreen": {
+        "type": "text",
+        "description": "Home Screen"
+    },
+    "settings": "सेटिंग्स",
+    "@settings": {
+        "type": "text",
+        "description": "Settings page"
+    },
+    "settingScreen": "सेटिंग स्क्रीन",
+    "@settingScreen": {
+        "type": "text",
+        "description": "Setting Screen"
+    },
+    "displayLanguage": "प्रदर्शन भाषा",
+    "@displayLanguage": {
+        "type": "text",
+        "description": "Display Language"
+    },
+    "selectLanguage": "भाषा चुनें",
+    "@selectLanguage": {
+        "type": "text",
+        "description": "Select Language"
+    },
+    "selectTheme": "थीम चुनें",
+    "@selectTheme": {
+        "type": "text",
+        "description": "Select Theme"
+    },
+    "themeMode": "थीम मोड",
+    "@themeMode": {
+        "type": "text",
+        "description": "Theme Mode"
+    },
+    "light": "लाइट",
+    "@light": {
+        "type": "text",
+        "description": "Light"
+    },
+    "lightSubTitle": "लाइट थीम का उपयोग करें",
+    "@lightSubTitle": {
+        "type": "text",
+        "description": "Use Light theme"
+    },
+    "dark": "डार्क",
+    "@dark": {
+        "type": "text",
+        "description": "Dark"
+    },
+    "darkSubTitle": "डार्क थीम का उपयोग करें",
+    "@darkSubTitle": {
+        "type": "text",
+        "description": "Use Dark theme"
+    },
+    "systemDefault": "सिस्टम डिफ़ॉल्ट",
+    "@systemDefault": {
+        "type": "text",
+        "description": "System Default"
+    },
+    "systemDefaultSubTitle": "सिस्टम डिफ़ॉल्ट थीम का उपयोग करें",
+    "@systemDefaultSubTitle": {
+        "type": "text",
+        "description": "Use system default theme"
+    },
+    "dynamicColor": "डायनामिक कलर",
+    "@dynamicColor": {
+        "type": "text",
+        "description": "Dynamic Color"
+    },
+    "dynamicColorSubTitle": "डायनामिक अनुकूली रंग का उपयोग करें",
+    "@dynamicColorSubTitle": {
+        "type": "text",
+        "description": "Use dynamic adaptive color"
+    },
+    "appearance": "दिखावट",
+    "@appearance": {
+        "type": "text",
+        "description": "Appearance"
+    },
+    "about": "के बारे में",
+    "@about": {
+        "type": "text",
+        "description": "About"
+    },
+    "privacyPolicy": "गोपनीयता नीति",
+    "@privacyPolicy": {
+        "type": "text",
+        "description": "Privacy Policy"
+    },
+    "termsOfService": "सेवा की शर्तें",
+    "@termsOfService": {
+        "type": "text",
+        "description": "Terms of Service"
+    },
+    "openSourceLicenses": "ओपन सोर्स लाइसेंस",
+    "@openSourceLicenses": {
+        "type": "text",
+        "description": "Open Source Licenses"
+    },
+    "version": "वर्शन",
+    "@version": {
+        "type": "text",
+        "description": "Version"
+    },
+    "login": "लॉगिन",
+    "@login": {
+        "type": "text",
+        "description": "लॉगिन बटन का पाठ"
+    },
+    "email": "ईमेल",
+    "@email": {
+        "type": "text",
+        "description": "ईमेल फ़ील्ड का लेबल"
+    },
+    "emailValidatorText": "कृपया अपना ईमेल दर्ज करें",
+    "@emailValidatorText": {
+        "type": "text",
+        "description": "ईमेल सत्यापन संदेश"
+    },
+    "emailHintText": "अपना ईमेल दर्ज करें",
+    "@emailHintText": {
+        "type": "text",
+        "description": "ईमेल इनपुट के लिए संकेत"
+    },
+    "password": "पासवर्ड",
+    "@password": {
+        "type": "text",
+        "description": "पासवर्ड फ़ील्ड का लेबल"
+    },
+    "passwordValidatorText": "कृपया अपना पासवर्ड दर्ज करें",
+    "@passwordValidatorText": {
+        "type": "text",
+        "description": "पासवर्ड सत्यापन संदेश"
+    },
+    "passwordHintText": "अपना पासवर्ड दर्ज करें",
+    "@passwordHintText": {
+        "type": "text",
+        "description": "पासवर्ड इनपुट के लिए संकेत"
+    },
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "@forgotPassword": {
+        "type": "text",
+        "description": "पासवर्ड पुनर्प्राप्ति लिंक"
+    },
+    "dontHaveAccount": "खाता नहीं है?",
+    "@dontHaveAccount": {
+        "type": "text",
+        "description": "खाता नहीं होने का संकेत"
+    },
+    "alreadyHaveAccount": "पहले से खाता है?",
+    "@alreadyHaveAccount": {
+        "type": "text",
+        "description": "पहले से खाता होने का संकेत"
+    },
+    "registerHere": "यहाँ रजिस्टर करें",
+    "@registerHere": {
+        "type": "text",
+        "description": "रजिस्टर करने के लिए लिंक"
+    },
+    "loginHere": "यहाँ लॉगिन करें",
+    "@loginHere": {
+        "type": "text",
+        "description": "लॉगिन करने के लिए लिंक"
+    },
+    "signup": "साइन अप",
+    "@signup": {
+        "type": "text",
+        "description": "साइन अप बटन का पाठ"
+    },
+    "forgotPasswordTitle": "पासवर्ड भूल गए",
+    "@forgotPasswordTitle": {
+        "type": "text",
+        "description": "पासवर्ड पुनर्प्राप्ति पृष्ठ का शीर्षक"
+    },
+    "forgotPasswordBodyText": "अपना पासवर्ड रीसेट करने के लिए अपना ईमेल दर्ज करें",
+    "@forgotPasswordBodyText": {
+        "type": "text",
+        "description": "पासवर्ड रीसेट करने के लिए निर्देश"
+    },
+    "resetPassword": "पासवर्ड रीसेट करें",
+    "@resetPassword": {
+        "type": "text",
+        "description": "पासवर्ड रीसेट करने का बटन"
+    },
+    "logout": "लॉगआउट",
+    "@logout": {
+        "type": "text",
+        "description": "लॉगआउट बटन"
+    },
+    "noTodoFounds": "कोई टू-डू नहीं मिला",
+    "@noTodoFounds": {
+        "type": "text",
+        "description": "जब कोई टू-डू उपलब्ध न हो तो संदेश"
+    },
+    "addTodo": "टू-डू जोड़ें",
+    "@addTodo": {
+        "type": "text",
+        "description": "नया टू-डू जोड़ने का बटन"
+    },
+    "close": "बंद करें",
+    "@close": {
+        "type": "text",
+        "description": "बंद करने का बटन"
+    },
+    "add": "जोड़ें",
+    "@add": {
+        "type": "text",
+        "description": "जोड़ने का बटन"
+    },
+    "account": "खाता",
+    "@account": {
+        "type": "text",
+        "description": "खाता अनुभाग का शीर्षक"
+    },
+    "accountDetails": "खाता विवरण",
+    "@accountDetails": {
+        "type": "text",
+        "description": "खाता विवरण का शीर्षक"
+    },
+    "deleteAccount": "खाता हटाएँ",
+    "@deleteAccount": {
+        "type": "text",
+        "description": "खाता हटाने का बटन"
+    }
+}

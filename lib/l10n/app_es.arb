@@ -1,0 +1,238 @@
+{
+    "@@locale": "es",
+    "helloWorld": "¡Hola, Mundo! Español",
+    "@helloWorld": {
+        "type": "text",
+        "description": "A hello world message"
+    },
+    "home": "Inicio",
+    "@home": {
+        "type": "text",
+        "description": "Home page"
+    },
+    "homeScreen": "Pantalla de Inicio",
+    "@homeScreen": {
+        "type": "text",
+        "description": "Home Screen"
+    },
+    "settings": "Ajustes",
+    "@settings": {
+        "type": "text",
+        "description": "Settings page"
+    },
+    "settingScreen": "Pantalla de Ajustes",
+    "@settingScreen": {
+        "type": "text",
+        "description": "Setting Screen"
+    },
+    "displayLanguage": "Idioma de Visualización",
+    "@displayLanguage": {
+        "type": "text",
+        "description": "Display Language"
+    },
+    "selectLanguage": "Seleccionar Idioma",
+    "@selectLanguage": {
+        "type": "text",
+        "description": "Select Language"
+    },
+    "selectTheme": "Seleccionar Tema",
+    "@selectTheme": {
+        "type": "text",
+        "description": "Select Theme"
+    },
+    "themeMode": "Modo de Tema",
+    "@themeMode": {
+        "type": "text",
+        "description": "Theme Mode"
+    },
+    "light": "Claro",
+    "@light": {
+        "type": "text",
+        "description": "Light"
+    },
+    "lightSubTitle": "Usar tema claro",
+    "@lightSubTitle": {
+        "type": "text",
+        "description": "Use Light theme"
+    },
+    "dark": "Oscuro",
+    "@dark": {
+        "type": "text",
+        "description": "Dark"
+    },
+    "darkSubTitle": "Usar tema oscuro",
+    "@darkSubTitle": {
+        "type": "text",
+        "description": "Use Dark theme"
+    },
+    "systemDefault": "Predeterminado del Sistema",
+    "@systemDefault": {
+        "type": "text",
+        "description": "System Default"
+    },
+    "systemDefaultSubTitle": "Usar tema predeterminado del sistema",
+    "@systemDefaultSubTitle": {
+        "type": "text",
+        "description": "Use system default theme"
+    },
+    "dynamicColor": "Color Dinámico",
+    "@dynamicColor": {
+        "type": "text",
+        "description": "Dynamic Color"
+    },
+    "dynamicColorSubTitle": "Usar color adaptativo dinámico",
+    "@dynamicColorSubTitle": {
+        "type": "text",
+        "description": "Use dynamic adaptive color"
+    },
+    "appearance": "Apariencia",
+    "@appearance": {
+        "type": "text",
+        "description": "Appearance"
+    },
+    "about": "Acerca de",
+    "@about": {
+        "type": "text",
+        "description": "About"
+    },
+    "privacyPolicy": "Política de Privacidad",
+    "@privacyPolicy": {
+        "type": "text",
+        "description": "Privacy Policy"
+    },
+    "termsOfService": "Términos de Servicio",
+    "@termsOfService": {
+        "type": "text",
+        "description": "Terms of Service"
+    },
+    "openSourceLicenses": "Licencias de Código Abierto",
+    "@openSourceLicenses": {
+        "type": "text",
+        "description": "Open Source Licenses"
+    },
+    "version": "Versión",
+    "@version": {
+        "type": "text",
+        "description": "Version"
+    },
+    "login": "Iniciar sesión",
+    "@login": {
+        "type": "text",
+        "description": "Texto del botón de inicio de sesión"
+    },
+    "email": "Correo electrónico",
+    "@email": {
+        "type": "text",
+        "description": "Etiqueta del campo de correo electrónico"
+    },
+    "emailValidatorText": "Por favor, introduce tu correo electrónico",
+    "@emailValidatorText": {
+        "type": "text",
+        "description": "Mensaje de validación del correo electrónico"
+    },
+    "emailHintText": "Introduce tu correo electrónico",
+    "@emailHintText": {
+        "type": "text",
+        "description": "Sugerencia para el campo de correo electrónico"
+    },
+    "password": "Contraseña",
+    "@password": {
+        "type": "text",
+        "description": "Etiqueta del campo de contraseña"
+    },
+    "passwordValidatorText": "Por favor, introduce tu contraseña",
+    "@passwordValidatorText": {
+        "type": "text",
+        "description": "Mensaje de validación de la contraseña"
+    },
+    "passwordHintText": "Introduce tu contraseña",
+    "@passwordHintText": {
+        "type": "text",
+        "description": "Sugerencia para el campo de contraseña"
+    },
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "@forgotPassword": {
+        "type": "text",
+        "description": "Enlace de recuperación de contraseña"
+    },
+    "dontHaveAccount": "¿No tienes una cuenta?",
+    "@dontHaveAccount": {
+        "type": "text",
+        "description": "Mensaje de falta de cuenta"
+    },
+    "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+    "@alreadyHaveAccount": {
+        "type": "text",
+        "description": "Mensaje de cuenta existente"
+    },
+    "registerHere": "Regístrate aquí",
+    "@registerHere": {
+        "type": "text",
+        "description": "Enlace para registrarse"
+    },
+    "loginHere": "Inicia sesión aquí",
+    "@loginHere": {
+        "type": "text",
+        "description": "Enlace para iniciar sesión"
+    },
+    "signup": "Registrarse",
+    "@signup": {
+        "type": "text",
+        "description": "Texto del botón de registro"
+    },
+    "forgotPasswordTitle": "Recuperar contraseña",
+    "@forgotPasswordTitle": {
+        "type": "text",
+        "description": "Título de la página de recuperación de contraseña"
+    },
+    "forgotPasswordBodyText": "Introduce tu correo electrónico para restablecer tu contraseña",
+    "@forgotPasswordBodyText": {
+        "type": "text",
+        "description": "Instrucciones para restablecer la contraseña"
+    },
+    "resetPassword": "Restablecer contraseña",
+    "@resetPassword": {
+        "type": "text",
+        "description": "Botón para restablecer la contraseña"
+    },
+    "logout": "Cerrar sesión",
+    "@logout": {
+        "type": "text",
+        "description": "Botón de cierre de sesión"
+    },
+    "noTodoFounds": "No se encontraron tareas",
+    "@noTodoFounds": {
+        "type": "text",
+        "description": "Mensaje cuando no hay tareas disponibles"
+    },
+    "addTodo": "Agregar tarea",
+    "@addTodo": {
+        "type": "text",
+        "description": "Botón para agregar una nueva tarea"
+    },
+    "close": "Cerrar",
+    "@close": {
+        "type": "text",
+        "description": "Botón de cerrar"
+    },
+    "add": "Añadir",
+    "@add": {
+        "type": "text",
+        "description": "Botón de añadir"
+    },
+    "account": "Cuenta",
+    "@account": {
+        "type": "text",
+        "description": "Título de la sección de cuenta"
+    },
+    "accountDetails": "Detalles de la cuenta",
+    "@accountDetails": {
+        "type": "text",
+        "description": "Título de los detalles de la cuenta"
+    },
+    "deleteAccount": "Eliminar cuenta",
+    "@deleteAccount": {
+        "type": "text",
+        "description": "Botón para eliminar la cuenta"
+    }
+}
