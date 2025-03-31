@@ -1,34 +1,35 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
 
 class TodoModel extends Equatable {
   const TodoModel({
-    required this.id,
     required this.userID,
     required this.name,
-    required this.updatedAt,
     required this.createdAt,
+    this.id,
+    this.updatedAt,
   });
 
-  factory TodoModel.fromDocSnapshot(DocumentSnapshot doc) {
-    final data = doc.data()! as Map<String, dynamic>;
+  factory TodoModel.fromJson(Map<String, dynamic> json) {
     return TodoModel(
-      id: doc.id,
-      userID: data['user_id'] as String,
-      name: data['name'] as String,
-      updatedAt: DateTime.parse(data['updated_at'] as String),
-      createdAt: DateTime.parse(data['created_at'] as String),
+      id: json['id'] as int,
+      userID: json['user_id'] as String,
+      name: json['name'] as String,
+      updatedAt:
+          json['updated_at'] == null
+              ? null
+              : DateTime.parse(json['updated_at'] as String),
+      createdAt: DateTime.parse(json['created_at'] as String),
     );
   }
 
-  final String id;
+  final int? id;
   final String userID;
   final String name;
-  final DateTime updatedAt;
+  final DateTime? updatedAt;
   final DateTime createdAt;
 
   TodoModel copyWith({
-    String? id,
+    int? id,
     String? userID,
     String? name,
     DateTime? updatedAt,
@@ -43,12 +44,11 @@ class TodoModel extends Equatable {
     );
   }
 
-  Map<String, String> toJson() {
+  Map<String, dynamic> toJson() {
     return {
-      'id': id,
       'user_id': userID,
       'name': name,
-      'updated_at': updatedAt.toIso8601String(),
+      'updated_at': updatedAt?.toIso8601String(),
       'created_at': createdAt.toIso8601String(),
     };
   }

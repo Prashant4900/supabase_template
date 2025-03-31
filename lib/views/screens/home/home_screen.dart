@@ -6,7 +6,6 @@ import 'package:flutter_template/services/app_prefs.dart';
 import 'package:flutter_template/views/components/body_widget.dart';
 import 'package:flutter_template/views/screens/home/cubit/todo_cubit.dart';
 import 'package:go_router/go_router.dart';
-import 'package:uuid/v4.dart';
 
 class MyHomeScreen extends StatefulWidget {
   const MyHomeScreen({super.key});
@@ -39,7 +38,6 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
               if (!context.mounted) return;
 
               final model = TodoModel(
-                id: const UuidV4().generate(),
                 userID: AppPrefHelper.getUserID(),
                 name: todo,
                 updatedAt: DateTime.now(),
@@ -51,6 +49,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
             child: const Icon(Icons.add),
           ),
           body: BodyWidget(
+            isLoading: state.status == TodoStatus.loading,
             child:
                 state.todos.isEmpty
                     ? Center(child: Text(context.lang.noTodoFounds))
@@ -62,10 +61,14 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                         return ListTile(
                           contentPadding: EdgeInsets.zero,
                           title: Text(todo.name),
+                          leading: CircleAvatar(
+                            radius: 16,
+                            child: Text('$index'),
+                          ),
                           trailing: IconButton(
                             onPressed:
                                 () => context.read<TodoCubit>().deleteTodo(
-                                  todo.id,
+                                  todo.id!,
                                 ),
                             icon: const Icon(Icons.delete_outline),
                           ),

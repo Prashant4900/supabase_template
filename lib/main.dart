@@ -1,14 +1,17 @@
 import 'dart:async';
 
+import 'package:env_reader/env_reader.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_template/common/extensions.dart';
 import 'package:flutter_template/firebase_options.dart';
+import 'package:flutter_template/gen/env/env_model.dart';
 import 'package:flutter_template/gen/l10n/app_localizations.dart';
 import 'package:flutter_template/routes/router.dart';
 import 'package:flutter_template/services/app_analytics.dart';
@@ -19,6 +22,7 @@ import 'package:flutter_template/theme/theme_manager.dart';
 import 'package:flutter_template/views/screens/auth/cubit/auth_cubit.dart';
 import 'package:flutter_template/views/screens/home/cubit/todo_cubit.dart';
 import 'package:flutter_template/views/screens/setting/cubit/setting_cubit.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
   await runZonedGuarded(() async {
@@ -27,12 +31,24 @@ Future<void> main() async {
     // Initialize Splash Screen
     FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
+    // Initialize Env
+    await Env.load(
+      EnvStringLoader(await rootBundle.loadString('assets/env/.env')),
+      'MyOptionalSecretKey',
+    );
+
     // Initialize ScreenUtil
     await ScreenUtil.ensureScreenSize();
 
     // Firebase initialization
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
+    );
+
+    // Supabase initialization
+    await Supabase.initialize(
+      url: EnvModel.supabaseUrl,
+      anonKey: EnvModel.supabaseAnon,
     );
 
     // Initialize App Analytics
@@ -76,7 +92,7 @@ class _MyAppState extends State<MyApp> {
     return MultiBlocProvider(
       providers: [
         BlocProvider<SettingCubit>(create: (context) => SettingCubit()..init()),
-        BlocProvider<AuthCubit>(create: (context) => AuthCubit()),
+        BlocProvider<AuthCubit>(create: (context) => AuthCubit()..init()),
         BlocProvider<TodoCubit>(
           create: (context) => TodoCubit()..getAllTodos(),
         ),

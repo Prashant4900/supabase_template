@@ -6,8 +6,21 @@ import 'package:flutter_template/routes/router.dart';
 import 'package:flutter_template/views/components/body_widget.dart';
 import 'package:flutter_template/views/screens/auth/cubit/auth_cubit.dart';
 
-class MyAccountScreen extends StatelessWidget {
+class MyAccountScreen extends StatefulWidget {
   const MyAccountScreen({super.key});
+
+  @override
+  State<MyAccountScreen> createState() => _MyAccountScreenState();
+}
+
+class _MyAccountScreenState extends State<MyAccountScreen> {
+  final _controller = TextEditingController();
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,10 +48,22 @@ class MyAccountScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   verticalMargin24,
-                  Text(context.lang.email),
+                  const Text('Name'),
                   TextFormField(
+                    controller: _controller..text = state.userModel?.name ?? '',
                     decoration: InputDecoration(
-                      hintText: context.lang.emailHintText,
+                      hintText: 'Enter your name',
+                      suffixIcon: IconButton(
+                        onPressed: () {
+                          if (_controller.text.isEmpty) return;
+
+                          final model = state.userModel?.copyWith(
+                            name: _controller.text.trim(),
+                          );
+                          context.read<AuthCubit>().updateUser(model);
+                        },
+                        icon: const Icon(Icons.check),
+                      ),
                     ),
                   ),
                   const Spacer(),

@@ -29,6 +29,7 @@ class MyRoutes {
   static const me = '/me';
   static const language = '/language';
   static const theme = '/theme';
+  static const license = '/license';
 }
 
 final routerConfig = GoRouter(
@@ -69,6 +70,9 @@ class LgoinRoute extends GoRouteData {
   @override
   Widget build(BuildContext context, GoRouterState state) =>
       const MyLoginScreen();
+
+  // Add this static method to provide the navigator key
+  static final GlobalKey<NavigatorState> $navigatorKey = _rootNavigatorKey;
 }
 
 @TypedGoRoute<SignupRoute>(path: MyRoutes.signup)
@@ -78,6 +82,9 @@ class SignupRoute extends GoRouteData {
   @override
   Widget build(BuildContext context, GoRouterState state) =>
       const MySignupScreen();
+
+  // Add this static method to provide the navigator key
+  static final GlobalKey<NavigatorState> $navigatorKey = _rootNavigatorKey;
 }
 
 @TypedGoRoute<ForgotRoute>(path: MyRoutes.forgot)
@@ -87,6 +94,9 @@ class ForgotRoute extends GoRouteData {
   @override
   Widget build(BuildContext context, GoRouterState state) =>
       const MyForgotScreen();
+
+  // Add this static method to provide the navigator key
+  static final GlobalKey<NavigatorState> $navigatorKey = _rootNavigatorKey;
 }
 
 @TypedGoRoute<AccountRoute>(path: MyRoutes.me)
@@ -96,6 +106,9 @@ class AccountRoute extends GoRouteData {
   @override
   Widget build(BuildContext context, GoRouterState state) =>
       const MyAccountScreen();
+
+  // Add this static method to provide the navigator key
+  static final GlobalKey<NavigatorState> $navigatorKey = _rootNavigatorKey;
 }
 
 @TypedGoRoute<LanguageRoute>(path: MyRoutes.language)
@@ -105,6 +118,9 @@ class LanguageRoute extends GoRouteData {
   @override
   Widget build(BuildContext context, GoRouterState state) =>
       const MyLanguageScreen();
+
+  // Add this static method to provide the navigator key
+  static final GlobalKey<NavigatorState> $navigatorKey = _rootNavigatorKey;
 }
 
 @TypedGoRoute<ThemeRoute>(path: MyRoutes.theme)
@@ -114,6 +130,9 @@ class ThemeRoute extends GoRouteData {
   @override
   Widget build(BuildContext context, GoRouterState state) =>
       const MyThemeScreen();
+
+  // Add this static method to provide the navigator key
+  static final GlobalKey<NavigatorState> $navigatorKey = _rootNavigatorKey;
 }
 
 @TypedShellRoute<DashboardRoute>(
@@ -150,4 +169,16 @@ class SettingRoute extends GoRouteData {
   Page<void> buildPage(BuildContext context, GoRouterState state) {
     return const NoTransitionPage(child: MySettingScreen());
   }
+}
+
+@TypedGoRoute<LicenseRoute>(path: MyRoutes.license)
+class LicenseRoute extends GoRouteData {
+  const LicenseRoute();
+
+  @override
+  Widget build(BuildContext context, GoRouterState state) =>
+      const LicensePage();
+
+  // Add this static method to provide the navigator key
+  static final GlobalKey<NavigatorState> $navigatorKey = _rootNavigatorKey;
 }

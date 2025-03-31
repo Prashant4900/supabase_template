@@ -7,8 +7,6 @@ import 'package:flutter_template/routes/router.dart';
 import 'package:flutter_template/theme/theme_manager.dart';
 import 'package:flutter_template/utils/url_utility.dart';
 import 'package:flutter_template/views/screens/setting/cubit/setting_cubit.dart';
-import 'package:flutter_template/views/screens/setting/language_screen.dart';
-import 'package:flutter_template/views/screens/setting/theme_screen.dart';
 
 class MySettingScreen extends StatelessWidget {
   const MySettingScreen({super.key});
@@ -104,27 +102,13 @@ class MySettingScreen extends StatelessWidget {
                 title: Text(context.lang.selectTheme),
                 subtitle: Text(getThemeSubtitle(state.themeMode, context)),
                 leading: const Icon(Icons.light_mode_outlined),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute<void>(
-                      builder: (_) => const MyThemeScreen(),
-                    ),
-                  );
-                },
+                onTap: () => const ThemeRoute().push<void>(context),
               ),
               ListTile(
                 title: Text(context.lang.selectLanguage),
                 subtitle: Text(getLanguageName(state.locale)),
                 leading: const Icon(Icons.language),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute<void>(
-                      builder: (_) => const MyLanguageScreen(),
-                    ),
-                  );
-                },
+                onTap: () => const LanguageRoute().push<void>(context),
               ),
               verticalMargin16,
               Padding(
@@ -144,14 +128,7 @@ class MySettingScreen extends StatelessWidget {
               ListTile(
                 title: Text(context.lang.openSourceLicenses),
                 leading: const Icon(Icons.verified_outlined),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute<void>(
-                      builder: (context) => const LicensePage(),
-                    ),
-                  );
-                },
+                onTap: () => const LicenseRoute().push<void>(context),
               ),
               ListTile(
                 title: Text(context.lang.version),

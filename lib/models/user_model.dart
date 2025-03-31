@@ -1,58 +1,76 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
 
 class UserModel extends Equatable {
   const UserModel({
-    required this.userID,
+    required this.uid,
     required this.email,
+    required this.name,
     required this.createdAt,
-    required this.updatedAt,
-    required this.lastSignIn,
+    this.updatedAt,
+    this.lastSignIn,
   });
 
-  factory UserModel.fromDocSnapshot(DocumentSnapshot doc) {
-    final data = doc.data()! as Map<String, dynamic>;
+  factory UserModel.fromJson(Map<String, dynamic> json) {
+    print('Name: $json');
     return UserModel(
-      userID: doc.id,
-      email: data['email'] as String,
-      createdAt: DateTime.parse(data['created_at'] as String),
-      updatedAt: DateTime.parse(data['updated_at'] as String),
-      lastSignIn: DateTime.parse(data['last_sign_in'] as String),
+      uid: json['uid'] as String,
+      email: json['email'] as String,
+      name: json['name'] as String,
+      createdAt: DateTime.parse(json['created_at'] as String),
+      updatedAt:
+          json['updated_at'] == null
+              ? null
+              : DateTime.tryParse(json['updated_at'] as String),
+      lastSignIn:
+          json['last_sign_in'] == null
+              ? null
+              : DateTime.tryParse(json['last_sign_in'] as String),
     );
   }
 
-  final String userID;
+  final String uid;
   final String email;
+  final String name;
   final DateTime createdAt;
-  final DateTime updatedAt;
-  final DateTime lastSignIn;
+  final DateTime? updatedAt;
+  final DateTime? lastSignIn;
+
+  Map<String, dynamic> toJson() {
+    return {
+      'uid': uid,
+      'email': email,
+      'name': name,
+      'created_at': createdAt.toIso8601String(),
+      'updated_at': updatedAt?.toIso8601String(),
+      'last_sign_in': lastSignIn?.toIso8601String(),
+    };
+  }
 
   UserModel copyWith({
-    String? userID,
+    String? uid,
     String? email,
+    String? name,
     DateTime? createdAt,
     DateTime? updatedAt,
     DateTime? lastSignIn,
   }) {
     return UserModel(
-      userID: userID ?? this.userID,
+      uid: uid ?? this.uid,
       email: email ?? this.email,
+      name: name ?? this.name,
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? this.updatedAt,
       lastSignIn: lastSignIn ?? this.lastSignIn,
     );
   }
 
-  Map<String, String> toJson() {
-    return {
-      'user_id': userID,
-      'email': email,
-      'created_at': createdAt.toIso8601String(),
-      'updated_at': updatedAt.toIso8601String(),
-      'last_sign_in': lastSignIn.toIso8601String(),
-    };
-  }
-
   @override
-  List<Object?> get props => [userID, email, createdAt, updatedAt, lastSignIn];
+  List<Object?> get props => [
+    uid,
+    email,
+    name,
+    createdAt,
+    updatedAt,
+    lastSignIn,
+  ];
 }

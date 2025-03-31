@@ -14,6 +14,7 @@ List<RouteBase> get $appRoutes => [
   $languageRoute,
   $themeRoute,
   $dashboardRoute,
+  $licenseRoute,
 ];
 
 RouteBase get $lgoinRoute => GoRouteData.$route(
@@ -176,6 +177,27 @@ extension $SettingRouteExtension on SettingRoute {
   static SettingRoute _fromState(GoRouterState state) => const SettingRoute();
 
   String get location => GoRouteData.$location('/setting');
+
+  void go(BuildContext context) => context.go(location);
+
+  Future<T?> push<T>(BuildContext context) => context.push<T>(location);
+
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
+
+  void replace(BuildContext context) => context.replace(location);
+}
+
+RouteBase get $licenseRoute => GoRouteData.$route(
+  path: '/license',
+
+  factory: $LicenseRouteExtension._fromState,
+);
+
+extension $LicenseRouteExtension on LicenseRoute {
+  static LicenseRoute _fromState(GoRouterState state) => const LicenseRoute();
+
+  String get location => GoRouteData.$location('/license');
 
   void go(BuildContext context) => context.go(location);
 

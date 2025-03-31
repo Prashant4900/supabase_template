@@ -19,11 +19,13 @@ class MySignupScreen extends StatefulWidget {
 class _MySignupScreenState extends State<MySignupScreen> {
   final _formKey = GlobalKey<FormState>();
 
+  final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   @override
   void dispose() {
+    _nameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
@@ -52,6 +54,22 @@ class _MySignupScreenState extends State<MySignupScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const Text('Name'),
+                TextFormField(
+                  controller: _nameController,
+                  keyboardType: TextInputType.name,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return context.lang.emailValidatorText;
+                    }
+                    return null;
+                  },
+                  decoration: const InputDecoration(
+                    hintText: 'Enter your name',
+                    suffixIcon: Icon(Icons.person),
+                  ),
+                ),
+                verticalMargin16,
                 Text(context.lang.email),
                 TextFormField(
                   controller: _emailController,
@@ -87,9 +105,14 @@ class _MySignupScreenState extends State<MySignupScreen> {
                 CustomElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
+                      final name = _nameController.text;
                       final email = _emailController.text;
                       final password = _passwordController.text;
-                      context.read<AuthCubit>().signup(email, password);
+                      context.read<AuthCubit>().signup(
+                        name: name,
+                        email: email,
+                        password: password,
+                      );
                     }
                   },
                   label: context.lang.signup,
