@@ -36,8 +36,15 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
             title: Text(context.lang.accountDetails),
             actions: [
               IconButton(
-                onPressed: () => context.read<AuthCubit>().logout(),
-                icon: const Icon(Icons.logout_outlined, color: Colors.red),
+                onPressed: () {
+                  if (_controller.text.isEmpty) return;
+
+                  final model = state.userModel?.copyWith(
+                    name: _controller.text.trim(),
+                  );
+                  context.read<AuthCubit>().updateUser(model);
+                },
+                icon: const Icon(Icons.check),
               ),
             ],
           ),
@@ -48,32 +55,20 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   verticalMargin24,
-                  const Text('Name'),
+                  Text(context.lang.name),
                   TextFormField(
                     controller: _controller..text = state.userModel?.name ?? '',
                     decoration: InputDecoration(
-                      hintText: 'Enter your name',
-                      suffixIcon: IconButton(
-                        onPressed: () {
-                          if (_controller.text.isEmpty) return;
-
-                          final model = state.userModel?.copyWith(
-                            name: _controller.text.trim(),
-                          );
-                          context.read<AuthCubit>().updateUser(model);
-                        },
-                        icon: const Icon(Icons.check),
-                      ),
+                      hintText: context.lang.nameHintText,
                     ),
                   ),
                   const Spacer(),
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: TextButton(
-                      onPressed:
-                          () => context.read<AuthCubit>().deleteAccount(),
+                      onPressed: () => context.read<AuthCubit>().logout(),
                       child: Text(
-                        context.lang.deleteAccount,
+                        context.lang.logout,
                         style: const TextStyle(color: Colors.red),
                       ),
                     ),

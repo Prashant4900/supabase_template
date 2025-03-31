@@ -18,10 +18,10 @@ class AppLocalizationsEs extends AppLocalizations {
   String get homeScreen => 'Pantalla de Inicio';
 
   @override
-  String get settings => 'Ajustes';
+  String get settings => 'Configuración';
 
   @override
-  String get settingScreen => 'Pantalla de Ajustes';
+  String get settingScreen => 'Pantalla de Configuración';
 
   @override
   String get displayLanguage => 'Idioma de Visualización';
@@ -84,46 +84,55 @@ class AppLocalizationsEs extends AppLocalizations {
   String get email => 'Correo electrónico';
 
   @override
-  String get emailValidatorText => 'Por favor, introduce tu correo electrónico';
+  String get name => 'Nombre';
 
   @override
-  String get emailHintText => 'Introduce tu correo electrónico';
+  String get nameValidatorText => 'Por favor ingrese su nombre';
+
+  @override
+  String get nameHintText => 'Ingrese su nombre';
+
+  @override
+  String get emailValidatorText => 'Por favor ingrese su correo electrónico';
+
+  @override
+  String get emailHintText => 'Ingrese su correo electrónico';
 
   @override
   String get password => 'Contraseña';
 
   @override
-  String get passwordValidatorText => 'Por favor, introduce tu contraseña';
+  String get passwordValidatorText => 'Por favor ingrese su contraseña';
 
   @override
-  String get passwordHintText => 'Introduce tu contraseña';
+  String get passwordHintText => 'Ingrese su contraseña';
 
   @override
-  String get forgotPassword => '¿Olvidaste tu contraseña?';
+  String get forgotPassword => '¿Olvidó su contraseña?';
 
   @override
-  String get dontHaveAccount => '¿No tienes una cuenta?';
+  String get dontHaveAccount => '¿No tiene una cuenta?';
 
   @override
-  String get alreadyHaveAccount => '¿Ya tienes una cuenta?';
+  String get alreadyHaveAccount => '¿Ya tiene una cuenta?';
 
   @override
-  String get registerHere => 'Regístrate aquí';
+  String get registerHere => 'Regístrese aquí';
 
   @override
-  String get loginHere => 'Inicia sesión aquí';
+  String get loginHere => 'Inicie sesión aquí';
 
   @override
   String get signup => 'Registrarse';
 
   @override
-  String get forgotPasswordTitle => 'Recuperar contraseña';
+  String get forgotPasswordTitle => 'Olvidé mi Contraseña';
 
   @override
-  String get forgotPasswordBodyText => 'Introduce tu correo electrónico para restablecer tu contraseña';
+  String get forgotPasswordBodyText => 'Ingrese su correo electrónico para restablecer su contraseña';
 
   @override
-  String get resetPassword => 'Restablecer contraseña';
+  String get resetPassword => 'Restablecer Contraseña';
 
   @override
   String get logout => 'Cerrar sesión';
@@ -132,7 +141,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get noTodoFounds => 'No se encontraron tareas';
 
   @override
-  String get addTodo => 'Agregar tarea';
+  String get addTodo => 'Añadir tarea';
 
   @override
   String get close => 'Cerrar';
@@ -144,8 +153,8 @@ class AppLocalizationsEs extends AppLocalizations {
   String get account => 'Cuenta';
 
   @override
-  String get accountDetails => 'Detalles de la cuenta';
+  String get accountDetails => 'Detalles de la Cuenta';
 
   @override
-  String get deleteAccount => 'Eliminar cuenta';
+  String get deleteAccount => 'Eliminar Cuenta';
 }

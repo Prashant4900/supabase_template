@@ -136,13 +136,6 @@ class MySettingScreen extends StatelessWidget {
                 leading: const Icon(Icons.info_outline),
                 onTap: () {},
               ),
-              ListTile(
-                textColor: Colors.red,
-                iconColor: Colors.red,
-                title: const Text('Logout'),
-                leading: const Icon(Icons.logout_outlined),
-                onTap: () {},
-              ),
             ],
           ),
         );

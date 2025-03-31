@@ -84,6 +84,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get email => 'Email';
 
   @override
+  String get name => 'Name';
+
+  @override
+  String get nameValidatorText => 'Please enter your name';
+
+  @override
+  String get nameHintText => 'Enter your name';
+
+  @override
   String get emailValidatorText => 'Please enter your email';
 
   @override
@@ -129,7 +138,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get logout => 'Logout';
 
   @override
-  String get noTodoFounds => 'No Todos founds';
+  String get noTodoFounds => 'No Todos found';
 
   @override
   String get addTodo => 'Add todo';

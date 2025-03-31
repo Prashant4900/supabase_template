@@ -54,19 +54,19 @@ class _MySignupScreenState extends State<MySignupScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('Name'),
+                Text(context.lang.name),
                 TextFormField(
                   controller: _nameController,
                   keyboardType: TextInputType.name,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return context.lang.emailValidatorText;
+                      return context.lang.nameValidatorText;
                     }
                     return null;
                   },
-                  decoration: const InputDecoration(
-                    hintText: 'Enter your name',
-                    suffixIcon: Icon(Icons.person),
+                  decoration: InputDecoration(
+                    hintText: context.lang.nameHintText,
+                    suffixIcon: const Icon(Icons.person),
                   ),
                 ),
                 verticalMargin16,

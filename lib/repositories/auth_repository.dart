@@ -80,14 +80,4 @@ class AuthRepository {
       rethrow;
     }
   }
-
-  Future<void> deleteAccount() async {
-    try {
-      await _auth.admin.deleteUser(AppPrefHelper.getUserID());
-      await AppPrefHelper.signOut();
-    } catch (exception, stackTrace) {
-      await AppLogger.error(exception, stackTrace);
-      rethrow;
-    }
-  }
 }

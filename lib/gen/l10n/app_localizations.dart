@@ -235,145 +235,163 @@ abstract class AppLocalizations {
   /// **'Version'**
   String get version;
 
-  /// No description provided for @login.
+  /// Login action
   ///
   /// In en, this message translates to:
   /// **'Login'**
   String get login;
 
-  /// No description provided for @email.
+  /// Email field
   ///
   /// In en, this message translates to:
   /// **'Email'**
   String get email;
 
-  /// No description provided for @emailValidatorText.
+  /// Name field
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get name;
+
+  /// Name field validation text
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your name'**
+  String get nameValidatorText;
+
+  /// Name field hint text
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your name'**
+  String get nameHintText;
+
+  /// Email field validation text
   ///
   /// In en, this message translates to:
   /// **'Please enter your email'**
   String get emailValidatorText;
 
-  /// No description provided for @emailHintText.
+  /// Email field hint text
   ///
   /// In en, this message translates to:
   /// **'Enter your email'**
   String get emailHintText;
 
-  /// No description provided for @password.
+  /// Password field
   ///
   /// In en, this message translates to:
   /// **'Password'**
   String get password;
 
-  /// No description provided for @passwordValidatorText.
+  /// Password field validation text
   ///
   /// In en, this message translates to:
   /// **'Please enter your password'**
   String get passwordValidatorText;
 
-  /// No description provided for @passwordHintText.
+  /// Password field hint text
   ///
   /// In en, this message translates to:
   /// **'Enter your password'**
   String get passwordHintText;
 
-  /// No description provided for @forgotPassword.
+  /// Forgot password link text
   ///
   /// In en, this message translates to:
   /// **'Forgot password?'**
   String get forgotPassword;
 
-  /// No description provided for @dontHaveAccount.
+  /// Text for users without an account
   ///
   /// In en, this message translates to:
   /// **'Don\'\'t have an account?'**
   String get dontHaveAccount;
 
-  /// No description provided for @alreadyHaveAccount.
+  /// Text for users that already have an account
   ///
   /// In en, this message translates to:
   /// **'Already have an account?'**
   String get alreadyHaveAccount;
 
-  /// No description provided for @registerHere.
+  /// Register here link text
   ///
   /// In en, this message translates to:
   /// **'Register here'**
   String get registerHere;
 
-  /// No description provided for @loginHere.
+  /// Login here link text
   ///
   /// In en, this message translates to:
   /// **'Login here'**
   String get loginHere;
 
-  /// No description provided for @signup.
+  /// Signup action
   ///
   /// In en, this message translates to:
   /// **'Signup'**
   String get signup;
 
-  /// No description provided for @forgotPasswordTitle.
+  /// Forgot password screen title
   ///
   /// In en, this message translates to:
   /// **'Forgot Password'**
   String get forgotPasswordTitle;
 
-  /// No description provided for @forgotPasswordBodyText.
+  /// Forgot password screen instructions
   ///
   /// In en, this message translates to:
   /// **'Enter your email to reset your password'**
   String get forgotPasswordBodyText;
 
-  /// No description provided for @resetPassword.
+  /// Reset password action
   ///
   /// In en, this message translates to:
   /// **'Reset Password'**
   String get resetPassword;
 
-  /// No description provided for @logout.
+  /// Logout action
   ///
   /// In en, this message translates to:
   /// **'Logout'**
   String get logout;
 
-  /// No description provided for @noTodoFounds.
+  /// Text shown when no todos are found
   ///
   /// In en, this message translates to:
-  /// **'No Todos founds'**
+  /// **'No Todos found'**
   String get noTodoFounds;
 
-  /// No description provided for @addTodo.
+  /// Add todo action
   ///
   /// In en, this message translates to:
   /// **'Add todo'**
   String get addTodo;
 
-  /// No description provided for @close.
+  /// Close action
   ///
   /// In en, this message translates to:
   /// **'Close'**
   String get close;
 
-  /// No description provided for @add.
+  /// Add action
   ///
   /// In en, this message translates to:
   /// **'Add'**
   String get add;
 
-  /// No description provided for @account.
+  /// Account section title
   ///
   /// In en, this message translates to:
   /// **'Account'**
   String get account;
 
-  /// No description provided for @accountDetails.
+  /// Account details section title
   ///
   /// In en, this message translates to:
   /// **'Account Details'**
   String get accountDetails;
 
-  /// No description provided for @deleteAccount.
+  /// Delete account action
   ///
   /// In en, this message translates to:
   /// **'Delete Account'**

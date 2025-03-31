@@ -3,6 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_template/models/user_model.dart';
 import 'package:flutter_template/repositories/auth_repository.dart';
 import 'package:flutter_template/repositories/user_repository.dart';
+import 'package:flutter_template/services/app_prefs.dart';
 import 'package:flutter_template/setup.dart';
 
 part 'auth_state.dart';
@@ -16,8 +17,12 @@ class AuthCubit extends Cubit<AuthState> {
   Future<void> init() async {
     emit(state.copyWith(status: AuthStatus.loading));
     try {
-      final userModel = await _userRepo.getUser();
-      emit(state.copyWith(status: AuthStatus.success, userModel: userModel));
+      if (AppPrefHelper.getEmail().isNotEmpty) {
+        final userModel = await _userRepo.getUser();
+        emit(state.copyWith(status: AuthStatus.success, userModel: userModel));
+      }
+
+      emit(state.copyWith(status: AuthStatus.success));
     } catch (exception) {
       emit(
         state.copyWith(
@@ -108,22 +113,6 @@ class AuthCubit extends Cubit<AuthState> {
     emit(state.copyWith(status: AuthStatus.loading));
     try {
       await _authRepo.signOut();
-      emit(state.copyWith(status: AuthStatus.initial));
-    } catch (exception) {
-      emit(
-        state.copyWith(
-          status: AuthStatus.failure,
-          message: exception.toString(),
-        ),
-      );
-    }
-  }
-
-  Future<void> deleteAccount() async {
-    emit(state.copyWith(status: AuthStatus.loading));
-    try {
-      await _userRepo.deleteUser();
-      await _authRepo.deleteAccount();
       emit(state.copyWith(status: AuthStatus.initial));
     } catch (exception) {
       emit(

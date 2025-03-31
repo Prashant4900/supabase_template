@@ -75,13 +75,22 @@ class AppLocalizationsHi extends AppLocalizations {
   String get openSourceLicenses => 'ओपन सोर्स लाइसेंस';
 
   @override
-  String get version => 'वर्शन';
+  String get version => 'संस्करण';
 
   @override
   String get login => 'लॉगिन';
 
   @override
   String get email => 'ईमेल';
+
+  @override
+  String get name => 'नाम';
+
+  @override
+  String get nameValidatorText => 'कृपया अपना नाम दर्ज करें';
+
+  @override
+  String get nameHintText => 'अपना नाम दर्ज करें';
 
   @override
   String get emailValidatorText => 'कृपया अपना ईमेल दर्ज करें';
@@ -105,13 +114,13 @@ class AppLocalizationsHi extends AppLocalizations {
   String get dontHaveAccount => 'खाता नहीं है?';
 
   @override
-  String get alreadyHaveAccount => 'पहले से खाता है?';
+  String get alreadyHaveAccount => 'पहले से ही खाता है?';
 
   @override
-  String get registerHere => 'यहाँ रजिस्टर करें';
+  String get registerHere => 'यहां रजिस्टर करें';
 
   @override
-  String get loginHere => 'यहाँ लॉगिन करें';
+  String get loginHere => 'यहां लॉगिन करें';
 
   @override
   String get signup => 'साइन अप';
@@ -129,10 +138,10 @@ class AppLocalizationsHi extends AppLocalizations {
   String get logout => 'लॉगआउट';
 
   @override
-  String get noTodoFounds => 'कोई टू-डू नहीं मिला';
+  String get noTodoFounds => 'कोई टूडो नहीं मिला';
 
   @override
-  String get addTodo => 'टू-डू जोड़ें';
+  String get addTodo => 'टूडो जोड़ें';
 
   @override
   String get close => 'बंद करें';
@@ -147,5 +156,5 @@ class AppLocalizationsHi extends AppLocalizations {
   String get accountDetails => 'खाता विवरण';
 
   @override
-  String get deleteAccount => 'खाता हटाएँ';
+  String get deleteAccount => 'खाता हटाएं';
 }

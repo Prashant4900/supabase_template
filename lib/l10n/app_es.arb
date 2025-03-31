@@ -15,12 +15,12 @@
         "type": "text",
         "description": "Home Screen"
     },
-    "settings": "Ajustes",
+    "settings": "Configuración",
     "@settings": {
         "type": "text",
         "description": "Settings page"
     },
-    "settingScreen": "Pantalla de Ajustes",
+    "settingScreen": "Pantalla de Configuración",
     "@settingScreen": {
         "type": "text",
         "description": "Setting Screen"
@@ -118,121 +118,136 @@
     "login": "Iniciar sesión",
     "@login": {
         "type": "text",
-        "description": "Texto del botón de inicio de sesión"
+        "description": "Login action"
     },
     "email": "Correo electrónico",
     "@email": {
         "type": "text",
-        "description": "Etiqueta del campo de correo electrónico"
+        "description": "Email field"
     },
-    "emailValidatorText": "Por favor, introduce tu correo electrónico",
+    "name": "Nombre",
+    "@name": {
+        "type": "text",
+        "description": "Name field"
+    },
+    "nameValidatorText": "Por favor ingrese su nombre",
+    "@nameValidatorText": {
+        "type": "text",
+        "description": "Name field validation text"
+    },
+    "nameHintText": "Ingrese su nombre",
+    "@nameHintText": {
+        "type": "text",
+        "description": "Name field hint text"
+    },
+    "emailValidatorText": "Por favor ingrese su correo electrónico",
     "@emailValidatorText": {
         "type": "text",
-        "description": "Mensaje de validación del correo electrónico"
+        "description": "Email field validation text"
     },
-    "emailHintText": "Introduce tu correo electrónico",
+    "emailHintText": "Ingrese su correo electrónico",
     "@emailHintText": {
         "type": "text",
-        "description": "Sugerencia para el campo de correo electrónico"
+        "description": "Email field hint text"
     },
     "password": "Contraseña",
     "@password": {
         "type": "text",
-        "description": "Etiqueta del campo de contraseña"
+        "description": "Password field"
     },
-    "passwordValidatorText": "Por favor, introduce tu contraseña",
+    "passwordValidatorText": "Por favor ingrese su contraseña",
     "@passwordValidatorText": {
         "type": "text",
-        "description": "Mensaje de validación de la contraseña"
+        "description": "Password field validation text"
     },
-    "passwordHintText": "Introduce tu contraseña",
+    "passwordHintText": "Ingrese su contraseña",
     "@passwordHintText": {
         "type": "text",
-        "description": "Sugerencia para el campo de contraseña"
+        "description": "Password field hint text"
     },
-    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "forgotPassword": "¿Olvidó su contraseña?",
     "@forgotPassword": {
         "type": "text",
-        "description": "Enlace de recuperación de contraseña"
+        "description": "Forgot password link text"
     },
-    "dontHaveAccount": "¿No tienes una cuenta?",
+    "dontHaveAccount": "¿No tiene una cuenta?",
     "@dontHaveAccount": {
         "type": "text",
-        "description": "Mensaje de falta de cuenta"
+        "description": "Text for users without an account"
     },
-    "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+    "alreadyHaveAccount": "¿Ya tiene una cuenta?",
     "@alreadyHaveAccount": {
         "type": "text",
-        "description": "Mensaje de cuenta existente"
+        "description": "Text for users that already have an account"
     },
-    "registerHere": "Regístrate aquí",
+    "registerHere": "Regístrese aquí",
     "@registerHere": {
         "type": "text",
-        "description": "Enlace para registrarse"
+        "description": "Register here link text"
     },
-    "loginHere": "Inicia sesión aquí",
+    "loginHere": "Inicie sesión aquí",
     "@loginHere": {
         "type": "text",
-        "description": "Enlace para iniciar sesión"
+        "description": "Login here link text"
     },
     "signup": "Registrarse",
     "@signup": {
         "type": "text",
-        "description": "Texto del botón de registro"
+        "description": "Signup action"
     },
-    "forgotPasswordTitle": "Recuperar contraseña",
+    "forgotPasswordTitle": "Olvidé mi Contraseña",
     "@forgotPasswordTitle": {
         "type": "text",
-        "description": "Título de la página de recuperación de contraseña"
+        "description": "Forgot password screen title"
     },
-    "forgotPasswordBodyText": "Introduce tu correo electrónico para restablecer tu contraseña",
+    "forgotPasswordBodyText": "Ingrese su correo electrónico para restablecer su contraseña",
     "@forgotPasswordBodyText": {
         "type": "text",
-        "description": "Instrucciones para restablecer la contraseña"
+        "description": "Forgot password screen instructions"
     },
-    "resetPassword": "Restablecer contraseña",
+    "resetPassword": "Restablecer Contraseña",
     "@resetPassword": {
         "type": "text",
-        "description": "Botón para restablecer la contraseña"
+        "description": "Reset password action"
     },
     "logout": "Cerrar sesión",
     "@logout": {
         "type": "text",
-        "description": "Botón de cierre de sesión"
+        "description": "Logout action"
     },
     "noTodoFounds": "No se encontraron tareas",
     "@noTodoFounds": {
         "type": "text",
-        "description": "Mensaje cuando no hay tareas disponibles"
+        "description": "Text shown when no todos are found"
     },
-    "addTodo": "Agregar tarea",
+    "addTodo": "Añadir tarea",
     "@addTodo": {
         "type": "text",
-        "description": "Botón para agregar una nueva tarea"
+        "description": "Add todo action"
     },
     "close": "Cerrar",
     "@close": {
         "type": "text",
-        "description": "Botón de cerrar"
+        "description": "Close action"
     },
     "add": "Añadir",
     "@add": {
         "type": "text",
-        "description": "Botón de añadir"
+        "description": "Add action"
     },
     "account": "Cuenta",
     "@account": {
         "type": "text",
-        "description": "Título de la sección de cuenta"
+        "description": "Account section title"
     },
-    "accountDetails": "Detalles de la cuenta",
+    "accountDetails": "Detalles de la Cuenta",
     "@accountDetails": {
         "type": "text",
-        "description": "Título de los detalles de la cuenta"
+        "description": "Account details section title"
     },
-    "deleteAccount": "Eliminar cuenta",
+    "deleteAccount": "Eliminar Cuenta",
     "@deleteAccount": {
         "type": "text",
-        "description": "Botón para eliminar la cuenta"
+        "description": "Delete account action"
     }
 }

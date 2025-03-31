@@ -116,51 +116,138 @@
         "description": "Version"
     },
     "login": "Login",
-    "@login": {},
+    "@login": {
+        "type": "text",
+        "description": "Login action"
+    },
     "email": "Email",
-    "@email": {},
+    "@email": {
+        "type": "text",
+        "description": "Email field"
+    },
+    "name": "Name",
+    "@name": {
+        "type": "text",
+        "description": "Name field"
+    },
+    "nameValidatorText": "Please enter your name",
+    "@nameValidatorText": {
+        "type": "text",
+        "description": "Name field validation text"
+    },
+    "nameHintText": "Enter your name",
+    "@nameHintText": {
+        "type": "text",
+        "description": "Name field hint text"
+    },
     "emailValidatorText": "Please enter your email",
-    "@emailValidatorText": {},
+    "@emailValidatorText": {
+        "type": "text",
+        "description": "Email field validation text"
+    },
     "emailHintText": "Enter your email",
-    "@emailHintText": {},
+    "@emailHintText": {
+        "type": "text",
+        "description": "Email field hint text"
+    },
     "password": "Password",
-    "@password": {},
+    "@password": {
+        "type": "text",
+        "description": "Password field"
+    },
     "passwordValidatorText": "Please enter your password",
-    "@passwordValidatorText": {},
+    "@passwordValidatorText": {
+        "type": "text",
+        "description": "Password field validation text"
+    },
     "passwordHintText": "Enter your password",
-    "@passwordHintText": {},
+    "@passwordHintText": {
+        "type": "text",
+        "description": "Password field hint text"
+    },
     "forgotPassword": "Forgot password?",
-    "@forgotPassword": {},
+    "@forgotPassword": {
+        "type": "text",
+        "description": "Forgot password link text"
+    },
     "dontHaveAccount": "Don''t have an account?",
-    "@dontHaveAccount": {},
+    "@dontHaveAccount": {
+        "type": "text",
+        "description": "Text for users without an account"
+    },
     "alreadyHaveAccount": "Already have an account?",
-    "@alreadyHaveAccount": {},
+    "@alreadyHaveAccount": {
+        "type": "text",
+        "description": "Text for users that already have an account"
+    },
     "registerHere": "Register here",
-    "@registerHere": {},
+    "@registerHere": {
+        "type": "text",
+        "description": "Register here link text"
+    },
     "loginHere": "Login here",
-    "@loginHere": {},
+    "@loginHere": {
+        "type": "text",
+        "description": "Login here link text"
+    },
     "signup": "Signup",
-    "@signup": {},
+    "@signup": {
+        "type": "text",
+        "description": "Signup action"
+    },
     "forgotPasswordTitle": "Forgot Password",
-    "@forgotPasswordTitle": {},
+    "@forgotPasswordTitle": {
+        "type": "text",
+        "description": "Forgot password screen title"
+    },
     "forgotPasswordBodyText": "Enter your email to reset your password",
-    "@forgotPasswordBodyText": {},
+    "@forgotPasswordBodyText": {
+        "type": "text",
+        "description": "Forgot password screen instructions"
+    },
     "resetPassword": "Reset Password",
+    "@resetPassword": {
+        "type": "text",
+        "description": "Reset password action"
+    },
     "logout": "Logout",
-    "@logout": {},
-    "@resetPassword": {},
-    "noTodoFounds": "No Todos founds",
-    "@noTodoFounds": {},
+    "@logout": {
+        "type": "text",
+        "description": "Logout action"
+    },
+    "noTodoFounds": "No Todos found",
+    "@noTodoFounds": {
+        "type": "text",
+        "description": "Text shown when no todos are found"
+    },
     "addTodo": "Add todo",
-    "@addTodo": {},
+    "@addTodo": {
+        "type": "text",
+        "description": "Add todo action"
+    },
     "close": "Close",
-    "@close": {},
+    "@close": {
+        "type": "text",
+        "description": "Close action"
+    },
     "add": "Add",
-    "@add": {},
+    "@add": {
+        "type": "text",
+        "description": "Add action"
+    },
     "account": "Account",
-    "@account": {},
+    "@account": {
+        "type": "text",
+        "description": "Account section title"
+    },
     "accountDetails": "Account Details",
-    "@accountDetails": {},
+    "@accountDetails": {
+        "type": "text",
+        "description": "Account details section title"
+    },
     "deleteAccount": "Delete Account",
-    "@deleteAccount": {}
+    "@deleteAccount": {
+        "type": "text",
+        "description": "Delete account action"
+    }
 }
